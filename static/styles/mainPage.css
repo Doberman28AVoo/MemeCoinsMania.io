@@ -2,13 +2,13 @@
         --ton-blue: #0098EA;
         --bg-light: #e9f6ff;
         --card-bg: #ffffff;
-        --text: #0b1220;
+        --text: #1b1b1b;
         --muted: #5b6975;
         --shadow: 0 8px 24px rgba(11, 18, 32, 0.08);
         --radius: 14px;
         font-family: Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
-        --txt-bg: #1d1d1dd5;
+        --txt-bg: #141414ef;
 
         --tra-015: all 0.15s ease;
         --tra-03: all 0.3s ease;
@@ -26,7 +26,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: #ff4500;
+        background-color: #313131;
     }
 
     body::before {
@@ -47,9 +47,8 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 200vh;
-        background-image: url('../images/bg_5.png');
-        /* tava bilde */
+        height: 160vh;
+        background-image: url('../images/bg_9.png');
         background-size: cover;
         background-position: center;
         z-index: -1;
@@ -77,7 +76,7 @@
         align-items: center;
         justify-content: space-between;
         gap: 20px;
-        margin-bottom: 34px;
+        /* margin-bottom: 34px; */
         /* background: red; */
     }
 
@@ -89,17 +88,22 @@
         font-size: 36px;
         color: white;
         text-decoration: none;
-        padding: 0 40px 10px 40px;
+        padding: 0 60px 10px 60px;
         border-radius: 16px;
+    border: 1px solid;
+    border-color: #383838;
         background: var(--txt-bg);
         -webkit-box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.27);
         box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.27);
+        margin: 40px 0 40px 0;
     }
 
     .logo_nav {
         padding: 0px 20px 4px 10px;
         border-radius: 16px;
         background: var(--txt-bg);
+         border: 1px solid;
+    border-color: #383838;
     }
 
     .logo_nav a {
@@ -123,6 +127,7 @@
         flex-direction: column;
         gap: 35px;
         margin-bottom: 36px;
+     
     }
 
     .slogan {
@@ -131,8 +136,10 @@
         line-height: 1.02;
         font-weight: 800;
         max-width: 1100px;
-        margin: 0;
+        margin: 0 0 60px 0;
         border-radius: 16px;
+        border: 1px solid;
+        border-color: #3b3b3b;
         padding: 30px 0 30px 40px;
         background: var(--txt-bg);
         -webkit-box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.27);
@@ -280,6 +287,8 @@
         height: 400px;
         background: var(--txt-bg);
         border-radius: 16px;
+        border: 1px solid;
+        border-color: #313131;
     }
 
     .go_to_page {
@@ -406,39 +415,72 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 60px;
-        padding: 16px;
-        /* background: linear-gradient(90deg, #7d011c, #2a0008); */
-        border-bottom: 2px solid #ffffff22;
-        margin-bottom: 30px;
+        gap: 50px;
+        padding: 20px 40px;
+        background: rgba(25, 25, 25, 0.8);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
         border-radius: 16px;
-        background-color: var(--txt-bg);
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+        width: fit-content;
+        margin: 0px auto 80px auto;
     }
 
+    /* --- POGAS PAMATS --- */
     .top-buttons a {
         display: flex;
         align-items: center;
         gap: 10px;
-        background-color: #ffffff;
-        color: #7d011c;
-        font-weight: bold;
-        border: none;
-        border-radius: 25px;
-        padding: 10px 26px;
-        margin: 0 20px 0 20px;
         text-decoration: none;
-        cursor: pointer;
-        transition: transform 0.2s, background-color 0.2s, color 0.2s;
-    }
-
-    .top-buttons i {
-        font-size: 18px;
-    }
-
-    .top-buttons a:hover {
-        background-color: #7d011c;
+        font-weight: 600;
+        font-size: 17px;
+        padding: 12px 30px;
+        border-radius: 40px;
+        transition: all 0.3s ease;
         color: white;
-        transform: scale(1.07);
+    }
+
+    /* --- TWITTER --- */
+    .top-buttons a:nth-child(1) {
+        background: linear-gradient(135deg, #1f1f1f, #2c2c2c);
+        border: 1px solid #00b4ff44;
+        box-shadow: 0 0 10px rgba(0, 180, 255, 0.2);
+    }
+
+    .top-buttons a:nth-child(1):hover {
+        background: linear-gradient(135deg, #1a1a1a, #111);
+        color: #00c3ff;
+        box-shadow: 0 0 15px rgba(0, 180, 255, 0.6);
+    }
+
+    /* --- TELEGRAM --- */
+    .top-buttons a:nth-child(2) {
+        background: linear-gradient(135deg, #0078d4, #00aaff);
+        box-shadow: 0 0 10px rgba(0, 140, 255, 0.5);
+    }
+
+    .top-buttons a:nth-child(2):hover {
+        filter: brightness(1.15);
+        box-shadow: 0 0 15px rgba(0, 180, 255, 0.6);
+        transform: scale(1.05);
+    }
+
+    /* --- BUY NOW --- */
+    .top-buttons a:nth-child(3) {
+        background: linear-gradient(135deg, #d4af37, #ffce54);
+        color: #1b1b1b;
+        box-shadow: 0 0 10px rgba(255, 220, 100, 0.4);
+    }
+
+    .top-buttons a:nth-child(3):hover {
+        filter: brightness(1.15);
+        transform: scale(1.05);
+        box-shadow: 0 0 15px rgba(255, 230, 130, 0.6);
+    }
+
+    /* --- IKONAS --- */
+    .top-buttons i {
+        font-size: 20px;
     }
 
     .turbo-footer {
@@ -449,7 +491,7 @@
         text-align: center;
         border-radius: 16px;
         font-family: 'Inter', sans-serif;
-        border-top: 2px solid #0077ff;
+        border: 1px solid #2e2e2e;
 
         /* margin-top: 30px;
         height: 400px;
