@@ -12,9 +12,14 @@
 </head>
 
 <body id="sp_body">
-    <div id="parallax-bg"></div>
+    <canvas id="canvas"></canvas>
+    <div class="background">
+        <div class="layer grid1"></div>
+        <div class="layer grid2"></div>
+    </div>
     <div class="container">
         <header id="top_header">
+            <div class="Header-img" style="background-image: url('./static/images/Cat_2.png')"></div>
             <a class="logo" href="#">MemeCoinsMania</a>
             <nav class="logo_nav">
                 <a href="#">About Us</a>
@@ -29,115 +34,157 @@
         <main id="middle_con">
 
             <div class="top-buttons">
-                <a href="https://x.com/CoinMa5856" target="_blank"><i class="fa-brands fa-x-twitter"></i> Twitter</a>
+                <a href="https://x.com/CoinMa5856" target="_blank"><i class="fa-brands fa-x-twitter"></i> X.com</a>
                 <a href="https://t.me/+akgVN8Fm_Lw0MWZk" target="_blank"><i class="fa-brands fa-telegram"></i>
                     Telegram</a>
                 <a href="https://www.dexscreener.com/" target="_blank"><i class="fa-solid fa-coins"></i> BUY NOW</a>
-                <!-- <a href="https://x.com/CoinMa5856" target="_blank">Twitter</a>
-            <a href="https://t.me/+akgVN8Fm_Lw0MWZk" target="_blank">Telegram</a>
-            <a href="https://www.google.com" target="_blank">Donate</a> -->
             </div>
 
 
 
             <div class="grid">
-                <!-- Kartīte 1 -->
-                <div class="coin-card">
-                    <div class="coin-header">
-                        <div class="coin-logo" style="background-image: url('hotcat-logo.png');"></div>
-                        <div class="coin-info">
-                            <h2 class="coin-title">HotCat</h2>
-                            <div class="coin-price">price $ 0.0051</div>
+
+                <!-- Card 1 -->
+                <div class="card_active card-grid">
+                    <div class="top-section">
+                        <div class="circle-image">
+                            <div class="circle-img" style="background-image: url('./static/images/Lububu.png');"></div>
+                        </div>
+                        <div class="info">
+                            <div class="coin-name">Lububu Popcorn</div>
+                            <div class="description">“Grab your popcorn, the meme show has just begun.”</div>
                         </div>
                     </div>
-                    <div class="coin-description">The original turbo meme coin. Born to burn.</div>
-                    <div class="buy-text">Buy Here</div>
-                    <div class="link-buttons">
-                        <a href="#">R</a><a href="#">U</a><a href="#">P</a><a href="#">T</a><a href="#">J</a>
+                    <div class="buy-section">
+                        <div class="buy-icon"><i class="fa-solid fa-arrow-down"></i></div>
+                        <div class="buy-text">Go here</div>
+                        <div class="buy-icon"><i class="fa-solid fa-arrow-down"></i></div>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="#" class="btn-grey"><i class="fa-brands fa-x-twitter"></i> X.com</a>
+                        <a href="#" class="btn-blue"><i class="fa-brands fa-telegram"></i> Telegram</a>
+                        <a href="#" class="btn-yellow"><i class="fa-solid fa-coins"></i> Buy here</a>
                     </div>
                 </div>
 
-                <!-- Kartīte 2 -->
-                <div class="coin-card">
-                    <div class="coin-header">
-                        <div class="coin-logo" style="background-image: url('purr-logo.png');"></div>
-                        <div class="coin-info">
-                            <h2 class="coin-title">PURR</h2>
-                            <div class="coin-price">price $ 0.0023</div>
+                <!-- Card 2 -->
+                <div class="card_disabled card-grid">
+                    <div class="top-section">
+                        <div class="circle-image">
+                            <div class="circle-img" style="background-image: url('./static/images/noImage.png');"></div>
+                        </div>
+                        <div class="info">
+                            <div class="coin-name">Coming soon</div>
+                            <div class="description">“Patience is power!”</div>
                         </div>
                     </div>
-                    <div class="coin-description">Reflections and rewards for loyal paws.</div>
-                    <div class="buy-text">Buy Here</div>
-                    <div class="link-buttons">
-                        <a href="#">R</a><a href="#">U</a><a href="#">P</a><a href="#">T</a><a href="#">J</a>
+                    <div class="buy-section">
+                        <div class="buy-icon"><i class="fa-solid fa-arrow-down"></i></div>
+                        <div class="buy-text">Go here</div>
+                        <div class="buy-icon"><i class="fa-solid fa-arrow-down"></i></div>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="#" class="btn-grey"><i class="fa-brands fa-x-twitter"></i> X.com</a>
+                        <a href="#" class="btn-blue"><i class="fa-brands fa-telegram"></i> Telegram</a>
+                        <a href="#" class="btn-yellow"><i class="fa-solid fa-coins"></i> Buy here</a>
                     </div>
                 </div>
 
-                <!-- Kartīte 3 -->
-                <div class="coin-card">
-                    <div class="coin-header">
-                        <div class="coin-logo" style="background-image: url('whisker-logo.png');"></div>
-                        <div class="coin-info">
-                            <h2 class="coin-title">WHISKER</h2>
-                            <div class="coin-price">price $ 0.0018</div>
+                <!-- Card 3 -->
+                <div class="card_disabled card-grid">
+                    <div class="top-section">
+                        <div class="circle-image">
+                            <div class="circle-img" style="background-image: url('./static/images/noImage.png');"></div>
+                        </div>
+                        <div class="info">
+                            <div class="coin-name">Coming soon</div>
+                            <div class="description">“Patience is power!”</div>
                         </div>
                     </div>
-                    <div class="coin-description">Governance token for MeowDAO rituals.</div>
-                    <div class="buy-text">Buy Here</div>
-                    <div class="link-buttons">
-                        <a href="#">R</a><a href="#">U</a><a href="#">P</a><a href="#">T</a><a href="#">J</a>
+                    <div class="buy-section">
+                        <div class="buy-icon"><i class="fa-solid fa-arrow-down"></i></div>
+                        <div class="buy-text">Go here</div>
+                        <div class="buy-icon"><i class="fa-solid fa-arrow-down"></i></div>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="#" class="btn-grey"><i class="fa-brands fa-x-twitter"></i> X.com</a>
+                        <a href="#" class="btn-blue"><i class="fa-brands fa-telegram"></i> Telegram</a>
+                        <a href="#" class="btn-yellow"><i class="fa-solid fa-coins"></i> Buy here</a>
                     </div>
                 </div>
 
-                <!-- Kartīte 4 -->
-                <div class="coin-card">
-                    <div class="coin-header">
-                        <div class="coin-logo" style="background-image: url('furball-logo.png');"></div>
-                        <div class="coin-info">
-                            <h2 class="coin-title">FURBALL</h2>
-                            <div class="coin-price">price $ 0.0009</div>
+                <!-- Card 4 -->
+                <div class="card_disabled card-grid">
+                    <div class="top-section">
+                        <div class="circle-image">
+                            <div class="circle-img" style="background-image: url('./static/images/noImage.png');"></div>
+                        </div>
+                        <div class="info">
+                            <div class="coin-name">Coming soon</div>
+                            <div class="description">“Patience is power!”</div>
                         </div>
                     </div>
-                    <div class="coin-description">Utility token for games, merch, and chaos.</div>
-                    <div class="buy-text">Buy Here</div>
-                    <div class="link-buttons">
-                        <a href="#">R</a><a href="#">U</a><a href="#">P</a><a href="#">T</a><a href="#">J</a>
+                    <div class="buy-section">
+                        <div class="buy-icon"><i class="fa-solid fa-arrow-down"></i></div>
+                        <div class="buy-text">Go here</div>
+                        <div class="buy-icon"><i class="fa-solid fa-arrow-down"></i></div>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="#" class="btn-grey"><i class="fa-brands fa-x-twitter"></i> X.com</a>
+                        <a href="#" class="btn-blue"><i class="fa-brands fa-telegram"></i> Telegram</a>
+                        <a href="#" class="btn-yellow"><i class="fa-solid fa-coins"></i> Buy here</a>
                     </div>
                 </div>
 
-                <!-- Kartīte 5 -->
-                <div class="coin-card">
-                    <div class="coin-header">
-                        <div class="coin-logo" style="background-image: url('scratch-logo.png');"></div>
-                        <div class="coin-info">
-                            <h2 class="coin-title">SCRATCH</h2>
-                            <div class="coin-price">price $ 0.0033</div>
+                <!-- Card 5 -->
+                <div class="card_disabled card-grid">
+                    <div class="top-section">
+                        <div class="circle-image">
+                            <div class="circle-img" style="background-image: url('./static/images/noImage.png');"></div>
+                        </div>
+                        <div class="info">
+                            <div class="coin-name">Coming soon</div>
+                            <div class="description">“Patience is power!”</div>
                         </div>
                     </div>
-                    <div class="coin-description">Launch token for new meme rituals.</div>
-                    <div class="buy-text">Buy Here</div>
-                    <div class="link-buttons">
-                        <a href="#">R</a><a href="#">U</a><a href="#">P</a><a href="#">T</a><a href="#">J</a>
+                    <div class="buy-section">
+                        <div class="buy-icon"><i class="fa-solid fa-arrow-down"></i></div>
+                        <div class="buy-text">Go here</div>
+                        <div class="buy-icon"><i class="fa-solid fa-arrow-down"></i></div>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="#" class="btn-grey"><i class="fa-brands fa-x-twitter"></i> X.com</a>
+                        <a href="#" class="btn-blue"><i class="fa-brands fa-telegram"></i> Telegram</a>
+                        <a href="#" class="btn-yellow"><i class="fa-solid fa-coins"></i> Buy here</a>
                     </div>
                 </div>
 
-                <!-- Kartīte 6 -->
-                <div class="coin-card">
-                    <div class="coin-header">
-                        <div class="coin-logo" style="background-image: url('meow-logo.png');"></div>
-                        <div class="coin-info">
-                            <h2 class="coin-title">MEOW</h2>
-                            <div class="coin-price">price $ 0.0042</div>
+                <!-- Card 6 -->
+                <div class="card_disabled card-grid">
+                    <div class="top-section">
+                        <div class="circle-image">
+                            <div class="circle-img" style="background-image: url('./static/images/noImage.png');"></div>
+                        </div>
+                        <div class="info">
+                            <div class="coin-name">Coming soon</div>
+                            <div class="description">“Patience is power!”</div>
                         </div>
                     </div>
-                    <div class="coin-description">Core token of the TurboMeow ecosystem.</div>
-                    <div class="buy-text">Buy Here</div>
-                    <div class="link-buttons">
-                        <a href="#">R</a><a href="#">U</a><a href="#">P</a><a href="#">T</a><a href="#">J</a>
+                    <div class="buy-section">
+                        <div class="buy-icon"><i class="fa-solid fa-arrow-down"></i></div>
+                        <div class="buy-text">Go here</div>
+                        <div class="buy-icon"><i class="fa-solid fa-arrow-down"></i></div>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="#" class="btn-grey"><i class="fa-brands fa-x-twitter"></i> X.com</a>
+                        <a href="#" class="btn-blue"><i class="fa-brands fa-telegram"></i> Telegram</a>
+                        <a href="#" class="btn-yellow"><i class="fa-solid fa-coins"></i> Buy here</a>
                     </div>
                 </div>
 
             </div>
+
+
 
             <div id="con_idea">
                 <div class="go_to_page">
@@ -181,6 +228,5 @@
     <script type="text/javaScript" src="static/java/FlexCard.js"></script>
 
 </body>
-
 
 </html>
