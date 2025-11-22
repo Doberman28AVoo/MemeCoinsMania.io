@@ -10,6 +10,16 @@
 
         --txt-bg: #141414ef;
 
+
+        --blue: #2f6df6;
+        --magenta: #c0188f;
+        --gold: #d4a017;
+        --gray-050: #f7f7f8;
+        --gray-100: #eef0f3;
+        --gray-300: #d9dbe1;
+        --text: #0e131a;
+        --muted: #4e5969;
+
         --tra-015: all 0.15s ease;
         --tra-03: all 0.3s ease;
         --tra-05: all 0.6s ease;
@@ -276,192 +286,354 @@
     }
 
 
+    /* .grid {
+
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+        width: 100%;
+        background: red;
+        
+    } */
+
     .grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 16px;
-        max-width: 1400px;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding-right: 60px;
+        /* atstarpe visām kartēm no labās malas */
+    }
+
+
+    /* .card {
+        display: grid;
+        grid-template-columns: 260px 1fr;
+        gap: 32px;
+        width: 100%;
+        align-items: stretch;
         margin: 0 auto;
-    }
-
-
-    .card-grid {
-        background: #fff;
+        background: #ffffff;
+        border: 1px solid var(--gray-300);
         border-radius: 16px;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
         padding: 24px;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-        width: 375px;
+
+        box-shadow:
+            0 0 20px #0077ff55,
+            inset 0 0 10px #00aaff22,
+            0 2px 8px rgba(0, 0, 0, 0.7);
+        transition: all 0.3s ease;
+        position: relative;
     }
 
-    /* .card-grid:hover {
-        transform: translateY(-8px);
+    .card:hover {
+        box-shadow: 0 0 40px rgba(0, 170, 255, 0.9);
+        transform: translateY(-3px);
+        animation: pulse-glow 3.5s infinite alternate;
+    } */
+
+    .card {
+        display: grid;
+        grid-template-columns: 260px 1fr;
+        gap: 32px;
+        width: 100%;
+        align-items: stretch;
+        margin: 0 auto;
+        background: #ffffff;
+        border: 1px solid var(--gray-300);
+        border-radius: 16px;
+        padding: 24px;
+        position: relative;
+        transition: all 0.3s ease;
+
+        /* Animācija vienmēr definēta, bet sākumā pauzēta */
+        animation: pulse-glow 3.5s infinite alternate;
+        animation-play-state: paused;
+
+        box-shadow:
+            0 0 20px #0077ff55,
+            inset 0 0 10px #00aaff22,
+            0 2px 8px rgba(0, 0, 0, 0.7);
     }
-     */
 
+    .card:hover {
+        box-shadow: 0 0 40px rgba(0, 170, 255, 0.9);
+        transform: translateY(-3px);
 
-    .card_active:hover {
-        box-shadow: 0 0 40px #00aaffaa, inset 0 0 10px #00aaff55;
-        -webkit-box-shadow: 0 0 40px #00aaffaa, inset 0 0 10px #00aaff55;
-        -moz-box-shadow: 0 0 40px #00aaffaa, inset 0 0 10px #00aaff55;
-        transform: translateY(-5px);
+        /* Aktivizē animāciju */
+        animation-play-state: running;
     }
 
-    .card_disabled:hover {
-        box-shadow: 0 0 40px #00aaffaa, inset 0 0 10px #00aaff55;
-        -webkit-box-shadow: 0 0 40px #00aaffaa, inset 0 0 10px #00aaff55;
-        -moz-box-shadow: 0 0 40px #00aaffaa, inset 0 0 10px #00aaff55;
 
+
+    /* Mirgošanas animācija ar 30% intensitāti */
+    @keyframes pulse-glow {
+        0% {
+            box-shadow: 0 0 40px rgba(0, 170, 255, 0.7);
+        }
+
+        50% {
+            box-shadow: 0 0 40px rgba(0, 170, 255, 1);
+        }
+
+        100% {
+            box-shadow: 0 0 40px rgba(0, 170, 255, 0.7);
+        }
     }
 
-    .top-section {
+    .card-left {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        align-content: start;
+    }
+
+    .logo-circle {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: #bfc3ca;
         display: flex;
         align-items: center;
-        gap: 24px;
-    }
+        justify-content: center;
+        color: #2b2f36;
+        font-weight: 600;
+        user-select: none;
 
-
-    .circle-image {
-        width: 140px;
-        height: 140px;
-        border-radius: 50%;
-        overflow: hidden;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease;
-
-        flex-shrink: 0;
-        /* flex-g+row: 0; */
-
-    }
-
-
-    .circle-img {
-        width: 100%;
-        height: 100%;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-
     }
 
-    .circle-image:hover {
-        transform: scale(1.05);
+    .solana-circle {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 11px;
+        font-weight: 600;
+        user-select: none;
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 
-    .card-grid:hover .logo {
-        transform: scale(1.1);
-    }
-
-    .info {
-        flex-grow: 1;
+    .card-right {
+        display: grid;
+        grid-template-rows: auto auto auto auto;
+        gap: 12px;
     }
 
     .coin-name {
-        font-size: 24px;
-        font-weight: bold;
-        margin-bottom: 12px;
-        color: #292929;
-
-        white-space: nowrap;
-        /* ← neļauj tekstam pārlauzties */
-        overflow: hidden;
-        /* ← ja ir pārāk garš, paslēpj pārpalikumu */
-        text-overflow: ellipsis;
-        /* ← pievieno “...” ja pārsniedz platumu */
+        margin: 0;
+        font-size: 28px;
+        line-height: 1.2;
+        color: var(--blue);
+        font-weight: 700;
     }
 
+    .round {
+        margin: 0;
+        font-size: 16px;
+        color: #1a1a1a;
+        font-weight: 600;
+    }
 
     .description {
-        padding: 5px 12px;
-        border-radius: 8px;
-        min-height: 100px;
-        max-height: 110px;
+        background: var(--gray-100);
+        border: 1px dashed var(--gray-300);
+        border-radius: 12px;
+        padding: 16px;
+        color: var(--muted);
 
+        /* Teksts vienmēr sākas no augšas */
         display: -webkit-box;
-        -webkit-line-clamp: 5;
-        /* ← maksimālais līniju skaits */
         -webkit-box-orient: vertical;
         overflow: hidden;
-        text-overflow: ellipsis;
 
+        /* Ierobežojam līdz 5 rindām */
+        -webkit-line-clamp: 5;
+        line-clamp: 5;
+        /* jaunāks standarts */
     }
 
-    .buy-section {
+    .actions {
         display: flex;
+        gap: 12px;
+        margin-top: 8px;
+        flex-wrap: wrap;
+    }
+
+    .ton-btn {
+        display: inline-flex;
         align-items: center;
-        justify-content: center;
-        border-radius: 8px;
-        gap: 20px;
-        padding: 5px 0;
-        margin-bottom: 10px
-            /* background: #ea005a; */
-    }
-
-    .buy-icon {
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 14px;
-        font-size: 28px;
-        font-weight: bold;
-    }
-
-    .buy-icon i {
-        color: #1a1a1a;
-    }
-
-    .buy-text {
-        font-weight: bold;
-        font-size: 24px;
-        color: #1a1a1a;
-    }
-
-    .card-buttons {
-        display: flex;
-        justify-content: space-between;
-        gap: 18px;
-    }
-
-    .card-buttons a {
-        flex: 1;
+        gap: 10px;
+        padding: 12px 20px;
+        border-radius: 30px;
+        color: #fff;
+        font-weight: 600;
         text-decoration: none;
-        padding: 12px 0;
-        border-radius: 22px;
-        font-size: 14px;
-        font-weight: bold;
-        text-align: center;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-
+        transition: all 0.3s ease;
+        box-shadow: 0px 4px 21px 6px rgba(211, 1, 148, 0.6);
     }
 
-    .card-buttons i {
-        margin-right: 5px;
+    .ton-btn:nth-child(1) {
+        background: linear-gradient(135deg, #1f1f1f, #2c2c2c);
+        border: 1px solid #00b4ff44;
+        box-shadow: 0 0 10px rgba(0, 180, 255, 0.2);
     }
 
-    .card-buttons a:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+    .ton-btn:nth-child(2) {
+        background: linear-gradient(135deg, #0078d4, #00aaff);
+        box-shadow: 0 0 10px rgba(0, 140, 255, 0.5);
     }
 
-    .btn-grey {
-        background: linear-gradient(45deg, #333, #666);
-        color: white;
+
+    .ton-btn .icon {
+        font-size: 1.2em;
+        display: flex;
+        align-items: center;
     }
 
-    .btn-blue {
-        background: linear-gradient(45deg, #007BFF, #00BFFF);
-        color: white;
+    .ton-btn:hover {
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0px 4px 21px 6px rgba(211, 1, 148, 0.6);
+        background: linear-gradient(135deg, #ff00aa, #d80090);
     }
 
-    .btn-yellow {
-        background: linear-gradient(45deg, #FFD700, #FFA500);
-        color: #141414;
+    .ton-btn:active {
+        transform: scale(0.97);
+    }
+
+    @keyframes ton-glow {
+        0% {
+            box-shadow: 0 0 10px rgba(102, 217, 255, 0.6);
+        }
+
+        50% {
+            box-shadow: 0 0 20px rgba(102, 217, 255, 0.9);
+        }
+
+        100% {
+            box-shadow: 0 0 10px rgba(102, 217, 255, 0.6);
+        }
+    }
+
+    .ton-btn:hover {
+        animation: ton-glow 1.5s infinite alternate;
+    }
+
+    /* Responsīvs pielāgojums */
+    @media (max-width: 720px) {
+        .card {
+            grid-template-columns: 1fr;
+            padding: 20px;
+        }
+
+        .logo-circle {
+            width: 160px;
+            height: 160px;
+        }
+
+        .coin-name {
+            font-size: 24px;
+        }
+    }
+
+    /* Animācijas definīcijas */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.05);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    @keyframes float {
+        0% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-6px);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    /* Pielietojums promo card elementiem */
+    .card {
+        animation: fadeInUp 0.4s ease-out;
+    }
+
+    .logo-circle {
+        animation: float 3s ease-in-out infinite;
+    }
+
+    .solana-circle {
+        animation: pulse 2s ease-in-out infinite;
+    }
+
+    .coin-name {
+        animation: fadeInUp 1s ease-out;
+        animation-delay: 0.2s;
+        animation-fill-mode: both;
+    }
+
+    .round {
+        animation: fadeInUp 1s ease-out;
+        animation-delay: 0.4s;
+        animation-fill-mode: both;
+    }
+
+    .description {
+        background: var(--gray-100);
+        border: 1px dashed var(--gray-300);
+        border-radius: 12px;
+        padding: 16px;
+        color: var(--muted);
+        text-align: left;
+        display: -webkit-box;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        animation: fadeInUp 1s ease-out;
+        animation-delay: 0.6s;
+        animation-fill-mode: both;
+    }
+
+    .actions {
+        animation: fadeInUp 1s ease-out;
+        animation-delay: 0.8s;
+        animation-fill-mode: both;
+    }
+
+    .btn:hover {
+        transform: scale(1.05);
+        transition: transform 0.2s ease;
     }
 
     /* #region How born coins */
@@ -571,7 +743,7 @@
     }
 
     .card_flexCard:nth-child(3)::after {
-        background-image: url('../images/img-3.png');
+        background-image: url('../images/img-3.1.png');
     }
 
     .card_flexCard:nth-child(4)::after {
@@ -579,6 +751,10 @@
     }
 
     .card_flexCard:nth-child(5)::after {
+        background-image: url('../images/img-3.png');
+    }
+
+    .card_flexCard:nth-child(6)::after {
         background-image: url('../images/img-5.png');
     }
 
